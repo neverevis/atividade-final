@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <title>Sugerencias</title>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <img src="ícone.png" alt="logo" tabindex="-1" aria-hidden="true">
+    </header>
+    
+    <!-- Menu de navegação -->
+    <nav>
+        <div class="navbox">
+            <ul class="navul">
+                <li class="navitem">
+                    <span class="material-symbols-outlined" aria-hidden="true">menu_book</span>
+                    <a href="receitas_es.html" class="navtext" tabindex="0">recetas</a>
+                </li>
+                <li class="navitem">
+                    <span class="material-symbols-outlined" aria-hidden="true">contact_page</span>
+                    <a href="contato_es.html" class="navtext" tabindex="0">contacto</a>
+                </li>
+                <li class="navitem">
+                    <span class="material-symbols-outlined" aria-hidden="true">lightbulb</span>
+                    <a href="sugestões_es.html" class="navtext" tabindex="0">sugerencias</a>
+                </li>
+                <li class="dropitem" tabindex="0">
+                    <span class="material-symbols-outlined" aria-hidden="true">language</span>
+                    <a href="#" class="navtext" aria-haspopup="true" aria-expanded="false">idioma</a>
+                    <ul class="dropdown" aria-label="Elija el idioma">
+                        <li class="dropbox">
+                            <a href="sugestões.html" class="navtext" tabindex="0">português</a>
+                        </li>
+                        <li class="dropbox">
+                            <a href="sugestões_en.html" class="navtext" tabindex="0">english</a>
+                        </li>
+                        <li class="dropbox">
+                            <a href="sugestões_es.html" class="navtext" tabindex="0">español</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Corpo do site -->
+    <main>
+        <div class="titulo">
+            <h1 tabindex="0">Formulario de Sugerencias</h1>
+        </div>
+        <form action="/enviar-sugerencia" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                <legend tabindex="0">Información Personal</legend>
+                <div class="form-group">
+                    <label for="nome">Tu Nombre:</label>
+                    <input type="text" id="nome" name="nome" required tabindex="0">
+                </div>
+                <div class="form-group">
+                    <label for="email">Tu Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required tabindex="0">
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Tu Teléfono:</label>
+                    <input type="tel" id="telefone" name="telefone" tabindex="0">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend tabindex="0">Preferencias e Intereses</legend>
+                <div class="form-group">
+                    <label for="preferencia">¿Cómo prefieres recibir actualizaciones?</label>
+                    <select id="preferencia" name="preferencia" tabindex="0">
+                        <option value="receitas">Recetas</option>
+                        <option value="dicas">Consejos de Cocina</option>
+                        <option value="noticias">Noticias</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>¿Qué temas te interesan más?</label>
+                    <input type="checkbox" id="interesse1" name="interesses" value="vegano" tabindex="0">
+                    <label for="interesse1">Vegano</label><br>
+                    <input type="checkbox" id="interesse2" name="interesses" value="sem_gluten" tabindex="0">
+                    <label for="interesse2">Sin Gluten</label><br>
+                    <input type="checkbox" id="interesse3" name="interesses" value="fitness" tabindex="0">
+                    <label for="interesse3">Fitness</label>
+                </div>
+                <div class="form-group">
+                    <label>Tipo de sugerencia:</label>
+                    <input type="radio" id="tipo1" name="tipo_sugestao" value="doce" tabindex="0">
+                    <label for="tipo1">Dulce</label><br>
+                    <input type="radio" id="tipo2" name="tipo_sugestao" value="salgado" tabindex="0">
+                    <label for="tipo2">Salado</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend tabindex="0">Detalles de la Sugerencia</legend>
+                <div class="form-group">
+                    <label for="mensagem">Tu Sugerencia:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" tabindex="0"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="arquivos">Adjuntar Archivos (opcional):</label>
+                    <input type="file" id="arquivos" name="arquivos[]" accept=".jpg, .jpeg, .png, .pdf" multiple tabindex="0">
+                </div>
+            </fieldset>
+
+            <div class="button-group">
+                <button type="submit" tabindex="0">Enviar Sugerencia</button>
+                <button type="reset" tabindex="0">Limpiar</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p tabindex="0">&copy; 2024 Milan de Oliveira.</p>
+    </footer>
+</body>
+</html>

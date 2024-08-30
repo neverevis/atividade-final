@@ -1,0 +1,352 @@
+/*Cabeçalho*/
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
+header
+{
+    background-color: rgb(245, 239, 234);
+    padding: 5px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header img
+{
+    height: 90px;
+}
+
+/*Navegação*/
+nav{
+    display: flex;
+    flex-direction: row;
+    transition: top 0.3s;
+}
+
+/*Caixa da navegação*/
+.navbox{
+    width: 100%;
+    background-image: linear-gradient(rgb(58, 58, 58), rgb(58, 58, 58));
+}
+
+/*Lista da navegação*/
+.navul{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    list-style-type: none;
+    padding: 0.5vh;
+}
+
+.navbox ul li{
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.6%;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    background-color: rgb(58, 58, 58);
+    border: none;
+    transition-duration: 0.25s;
+    
+}
+
+/*Animação da navegação*/
+.navbox ul li:hover{
+    transform: scale(110%);
+    transition-duration: 0.25s;
+    background-color: rgb(94, 94, 94);
+}
+
+/*Texto da navegação*/
+.navtext{
+    margin-top: 3%;
+    font-family: "Carrois Gothic SC", sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown
+{
+    display: none;
+}
+
+.dropitem:hover .dropdown
+{
+    display: flex;
+    background-color: rgb(58, 58, 58);
+    border-radius: 1vw;
+    position: absolute;
+    top: 100%;
+    animation: scaledown .3s;
+    flex-wrap: wrap;
+    color: white;
+    padding: 0.7vw;
+    list-style-type: none;
+    flex-direction: column;
+}
+
+@keyframes scaledown {
+    0% {
+        transform: translateY(-90px)
+    }
+    0%{
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    70% {
+        transform: translateY(5px)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
+.navitem:hover{
+    a{
+        background-image: linear-gradient(45deg, #f3ec78, #ff8dad, #68d4ff);
+        background-size: 100%;
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+
+        transition-duration: 0.5s;
+    }
+    .material-symbols-outlined
+    {
+        background-image: linear-gradient(45deg, #a5f378, #faf2ff, #ffd768);
+        background-size: 100%;
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-background-clip: text;
+    }
+}
+
+.dropbox:hover{
+    .navtext{
+        background-image: linear-gradient(45deg, #f3ec78, #ff8dad, #68d4ff);
+        background-size: 100%;
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+
+        transition-duration: 0.5s;
+    }
+    .material-symbols-outlined
+    {
+        background-image: linear-gradient(45deg, #a5f378, #faf2ff, #ffd768);
+        background-size: 100%;
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-background-clip: text;
+    }
+}
+
+.material-symbols-outlined{
+    scale: 80%;
+    color: rgb(189, 189, 189);
+    margin-right: 0.5vw;
+    margin-left: vw;
+}
+
+footer p{
+    font-family: "Carrois Gothic SC", sans-serif;
+}
+
+/*Corpo*/
+.titulo
+{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    margin-right: 25vw;
+    margin-left: 25vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.titulo h1
+{
+    font-size: 25px;
+    display: flex;
+    margin: auto;
+}
+
+body
+{
+    background-color: #f5e8dc;
+}
+
+/*até uma largura de 992px*/
+@media (min-width: 992px){
+    .imgbox
+    {
+        display: flex;
+        min-width: 60%;
+        overflow: hidden;
+    }
+
+    img
+    {
+        max-width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+        transition: 1s ease all;
+    }
+
+    section
+    {
+        max-width: 1000px;
+        display: flex;
+        align-self: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 3%;
+        border-radius: 10px;
+        background-color: white;
+        overflow: hidden;
+    }
+}
+
+/*largura menor que 992px*/
+@media(max-width: 992px){
+
+.imgbox
+{
+    max-width: 100%;
+    overflow: hidden;
+}
+
+img
+{
+    max-width: 100%;
+    object-fit: cover;
+    transition: 1s ease all;
+}
+
+section
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 3%;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+}
+}
+
+.receita
+{
+    font-family: "Playfair Display", serif;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: 'playfairdisplay';
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: medium;
+}
+
+/*hover da imagem*/
+section:hover img
+{
+    transition: 1s ease all;
+    transform: scale(1.1);
+}
+
+.receita .material-symbols-outlined
+{
+    color: rgb(255, 166, 94);
+    transform: translateY(7px)
+}
+
+.receita p
+{
+    color: black;
+}
+
+/*tabela*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #f4f4f4;
+}
+td
+{
+    background-color: #f4f4f4;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+fieldset {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.form-group input[type="checkbox"], .form-group input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*footer*/
+footer{
+    padding: 10px;
+    transform: translateY(350px);
+    background-color: rgb(194, 159, 113);
+}
